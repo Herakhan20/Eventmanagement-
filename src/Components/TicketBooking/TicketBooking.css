@@ -1,0 +1,173 @@
+.ticket-booking {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #f9f9f9, #e0e0e0);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 0.6s ease-out;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  color: #222;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.booking-form input,
+.payment-methods select {
+  padding: 14px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+}
+
+.booking-form input:focus,
+.payment-methods select:focus {
+  border-color: #5cb85c;
+  box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+.pricing-chart {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.pricing-chart table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.pricing-chart th, .pricing-chart td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.payment-button {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 30px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-button:hover {
+  background-color: #4cae4c;
+  transform: translateY(-3px);
+}
+
+.payment-details {
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.payment-methods {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.success-message {
+  text-align: center;
+  background-color: #dff0d8;
+  padding: 25px;
+  border-radius: 8px;
+  color: #3c763d;
+  margin-top: 35px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-image-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.event-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.event-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.seating-chart {
+  margin-top: 20px;
+}
+
+.seats-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px; /* Adjust based on your needs */
+}
+
+.seat {
+  width: 20px; /* Size of each seat */
+  height: 20px;
+  margin: 5px;
+  background-color: lightgray;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: green; /* Highlight selected seats */
+}
+
+.seat:hover {
+  background-color: darkgray; /* Hover effect */
+}
+
+.seat.booked {
+  background-color: red;
+  cursor: not-allowed;
+}
